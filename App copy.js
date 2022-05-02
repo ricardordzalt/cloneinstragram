@@ -8,7 +8,7 @@ import {
   TextInput,
   FlatList,
   // from 'rn-styler';
-} from 'rn-styler';
+} from 'react-native';
 import {StyleSheet} from 'react-native';
 const data = [
   {
@@ -100,11 +100,11 @@ const App = () => {
   };
 
   return (
-    <View className="flex-1 bg-#EBEBEB">
-      <View className="flex-row mt-30">
-        <View className="border-b-color-#f5fcff bg-#ffffff rounded-30 border-b-1 h-45 flex-row align-center flex-1 m-10">
+    <View style={styles.container} className="bg-red-400">
+      <View style={styles.formContent}>
+        <View style={styles.inputContainer}>
           <Image
-            className="w-30 h-30 ml-15 justify-center"
+            style={[styles.icon, styles.inputIcon]}
             source={{uri: 'https://png.icons8.com/search/androidL/100/000000'}}
           />
           <TextInput
